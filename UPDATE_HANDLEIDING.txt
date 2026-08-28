@@ -55,3 +55,10 @@ V6.2 EXTRA
 - install-knop in de topbalk;
 - aangepaste appiconen voor laptop, Android en iPhone/iPad;
 - responsievere topbalk en branding.
+
+V6.2 UI-fix
+- logo staat nu ook als rootbestand zodat GitHub Pages het betrouwbaarder laadt;
+- install-app knop verwijderd;
+- dynamische modusbadge: Webmodus/Appmodus + mobiel/desktop;
+- sidebar overlap opgelost;
+- mobiel navigatiemenu compacter en horizontaal scrollbaar.

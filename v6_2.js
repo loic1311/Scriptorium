@@ -1,76 +1,33 @@
-
 (function(){
-  let deferredPrompt = null;
   function isStandalone(){
     return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
   }
-  function isIOS(){
-    return /iphone|ipad|ipod/i.test(navigator.userAgent);
+  function deviceLabel(){
+    const mobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
+    return mobile ? 'mobiel' : 'desktop';
   }
-  function updateInstallUI(){
-    const btn = document.getElementById('installAppBtn');
+  function updateModeChip(){
     const chip = document.getElementById('installStatusChip');
-    if(!btn || !chip) return;
-    if(isStandalone()){
-      btn.hidden = true;
-      chip.textContent = 'Appmodus';
-      document.body.classList.add('app-standalone');
-      return;
-    }
-    document.body.classList.remove('app-standalone');
-    if(deferredPrompt){
-      btn.hidden = false;
-      chip.textContent = 'Installeerbaar';
-    }else if(isIOS()){
-      btn.hidden = false;
-      chip.textContent = 'iPhone/iPad: deel → beginscherm';
-    }else {
-      btn.hidden = false;
-      chip.textContent = 'Webmodus';
-    }
-  }
-  async function installApp(){
-    if(deferredPrompt){
-      deferredPrompt.prompt();
-      try{ await deferredPrompt.userChoice; }catch(e){}
-      deferredPrompt = null;
-      updateInstallUI();
-      return;
-    }
-    if(isIOS()){
-      alert('Op iPhone/iPad: open deze pagina in Safari, tik op Deel en kies "Zet op beginscherm".');
-      return;
-    }
-    alert('Gebruik in Chrome of Edge het menu met de drie puntjes en kies "Installeer app" of "Pagina installeren als app".');
+    if(!chip) return;
+    const standalone = isStandalone();
+    chip.textContent = `${standalone ? 'Appmodus' : 'Webmodus'} · ${deviceLabel()}`;
+    chip.classList.toggle('app-mode', standalone);
+    chip.classList.toggle('web-mode', !standalone);
+    document.body.classList.toggle('app-standalone', standalone);
   }
   function patchVersionText(){
     document.querySelectorAll('.version-pill').forEach(el=>el.textContent='V6.2');
-    const small = document.querySelector('.brand small'); if(small) small.textContent='Onderzoekscoach V6.2 · authentieke bronnen · training · sync';
-    const title = document.title; if(title.includes('v6')) document.title = 'Scriptorium V6.2 - Academische Onderzoekscoach';
+    const small = document.querySelector('.brand small');
+    if(small) small.textContent='Onderzoekscoach V6.2 · authentieke bronnen · training · sync';
+    document.title = 'Scriptorium V6.2 - Academische Onderzoekscoach';
   }
-  function bindInstallBtn(){
-    const btn = document.getElementById('installAppBtn');
-    if(btn && !btn.dataset.v62bound){
-      btn.dataset.v62bound = '1';
-      btn.addEventListener('click', installApp);
-    }
-  }
-  window.addEventListener('beforeinstallprompt', (e)=>{
-    e.preventDefault();
-    deferredPrompt = e;
-    updateInstallUI();
-  });
-  window.addEventListener('appinstalled', ()=>{
-    deferredPrompt = null;
-    updateInstallUI();
-  });
   const prevInit = window.init;
   window.init = async function(){
     if(prevInit) await prevInit();
     patchVersionText();
-    bindInstallBtn();
-    updateInstallUI();
+    updateModeChip();
   };
-  window.addEventListener('DOMContentLoaded', ()=>{patchVersionText(); bindInstallBtn(); updateInstallUI();});
-  window.addEventListener('focus', updateInstallUI);
+  window.addEventListener('DOMContentLoaded', ()=>{patchVersionText();updateModeChip();});
+  window.addEventListener('focus', updateModeChip);
+  window.matchMedia('(display-mode: standalone)').addEventListener?.('change', updateModeChip);
 })();

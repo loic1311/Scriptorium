@@ -98,3 +98,54 @@ body.app-standalone .topbar-sub::after{content:' · appmodus';font-weight:700;co
   .hero{padding:20px;border-radius:22px}
   .topbar-mark{width:38px;height:38px}
 }
+
+
+/* V6.2 polish patch — reliable logo, uncluttered mode indicator, responsive sidebar */
+.sidebar{display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
+.sidebar .brand{flex:none}
+.sidebar .nav{flex:none}
+.side-note{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;margin-top:auto;padding:14px 15px;flex:none}
+.logo,.topbar-mark{background:transparent!important;border:0!important;box-shadow:none!important}
+.logo{width:62px;height:62px;overflow:hidden;border-radius:18px;flex:none}
+.logo img,.topbar-mark img{display:block;width:100%;height:100%;object-fit:contain;background:transparent}
+.topbar-mark{width:46px;height:46px;border-radius:14px;overflow:hidden;flex:none}
+.mode-chip{font-weight:700;letter-spacing:.01em;transition:all .18s ease;box-shadow:none!important}
+.mode-chip.web-mode{background:#f5f8f6;border-color:#d8e4dd;color:#61776d}
+.mode-chip.app-mode{background:#e8f6ee;border-color:#b9d8c6;color:#236e4a}
+.top-actions{gap:10px}
+.brand-copy{overflow:hidden}.brand-copy small{line-height:1.45}
+.sidebar .nav button{font-weight:650}
+.sidebar .nav button.active{box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.hero{overflow:hidden;position:relative}.hero:after{content:'';position:absolute;width:210px;height:210px;border-radius:50%;right:-70px;top:-95px;background:radial-gradient(circle,rgba(62,140,96,.12),rgba(62,140,96,0) 68%);pointer-events:none}
+.card,.stat,.hero{transition:box-shadow .18s ease,border-color .18s ease}
+.card:hover,.stat:hover{border-color:#c8dbcf;box-shadow:0 22px 48px rgba(31,93,70,.105)}
+@media(max-width:1050px){
+  .sidebar{overflow:visible;display:block}
+  .side-note{display:none!important}
+  .brand{max-width:520px}
+  .nav{grid-template-columns:repeat(4,minmax(120px,1fr));overflow-x:auto;padding-bottom:4px}
+  .nav button{min-width:120px;text-align:center}
+}
+@media(max-width:760px){
+  .sidebar{padding:12px 14px}
+  .brand{margin:0 0 10px;padding:12px 13px;border-radius:18px}
+  .logo{width:50px;height:50px}
+  .brand h1{font-size:20px}
+  .brand small{font-size:11px}
+  .nav{display:flex!important;gap:8px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding-bottom:6px}
+  .nav button{min-width:max-content!important;min-height:auto!important;padding:10px 13px!important;scroll-snap-align:start;border:1px solid rgba(255,255,255,.07)!important}
+  .topbar{padding:12px 16px;gap:10px}
+  .topbar-left{gap:10px}
+  .topbar-mark{width:40px;height:40px}
+  .topbar-sub{font-size:11px}
+  .top-actions{gap:8px}
+  .mode-chip{order:-1}
+  .hero{padding:19px}
+}
+@media(max-width:520px){
+  .grid.stats{grid-template-columns:1fr 1fr!important}
+  .top-actions .btn{padding:9px 11px}
+  .install-chip{padding:5px 8px}
+  .hero h3{font-size:25px}
+  .content{padding:13px!important}
+}
