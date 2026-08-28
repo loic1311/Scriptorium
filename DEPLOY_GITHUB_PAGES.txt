@@ -1,4 +1,4 @@
-SCRIPTORIUM V6.2 GRATIS INSTALLEREN ALS APP VIA GITHUB PAGES
+SCRIPTORIUM V6.2.1 GRATIS INSTALLEREN ALS APP VIA GITHUB PAGES
 
 WAAROM
 Een PWA moet via HTTPS worden geopend om als echte app installeerbaar te zijn.
@@ -8,10 +8,10 @@ STAPPEN
 1. Maak op GitHub een nieuwe PUBLIC repository, bijvoorbeeld:
    scriptorium
 
-2. Upload de INHOUD van de map Scriptorium_hybride_V6.2 naar de repository-root:
+2. Upload de INHOUD van de map Scriptorium_hybride_V6.2.1 naar de repository-root:
    index.html
-   V6.2.js
-   V6.2.css
+   V6.2.1.js
+   V6.2.1.css
    sources.js
    manifest.webmanifest
    sw.js

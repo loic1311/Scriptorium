@@ -45,20 +45,28 @@ WANNEER WEL EXTRA ACTIE NODIG IS
 - als een toekomstige update expliciet meldt dat het databaseschema of Supabase-schema verandert.
 
 BRONBIBLIOTHEEK
-V6.2.2 bevat 33 ingebouwde authentieke primaire bronnen.
+V6.2.1.2 bevat 33 ingebouwde authentieke primaire bronnen.
 Nieuwe bronpakketten kunnen daarnaast via de app worden geïmporteerd zonder nieuwe deployment.
 
 
-V6.2 EXTRA
+V6.2.1 EXTRA
 - nieuw geïntegreerd Scriptorium-logo;
 - verbeterde lichte groen/witte interface;
 - install-knop in de topbalk;
 - aangepaste appiconen voor laptop, Android en iPhone/iPad;
 - responsievere topbalk en branding.
 
-V6.2 UI-fix
+V6.2.1 UI-fix
 - logo staat nu ook als rootbestand zodat GitHub Pages het betrouwbaarder laadt;
 - install-app knop verwijderd;
 - dynamische modusbadge: Webmodus/Appmodus + mobiel/desktop;
 - sidebar overlap opgelost;
 - mobiel navigatiemenu compacter en horizontaal scrollbaar.
+
+
+V6.2.1 HOTFIX
+- PWA-icoonbestanden kregen versie-specifieke bestandsnamen om herinstallatie beter te laten verversen;
+- extra favicon/apple-touch-icon/meta-tags toegevoegd;
+- topbalk vereenvoudigd: install-knop verwijderd, alleen slimme modusbadge blijft;
+- extra event-delegatie voor navigatieknoppen en data-go/data-close;
+- pointer-events en mobiele tappable interacties expliciet verstevigd.

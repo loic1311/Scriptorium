@@ -1,7 +1,7 @@
-SCRIPTORIUM V6.2 — THEORIE + AUTHENTIEKE PRIMAIRE BRONNEN + SYNC + PWA
+SCRIPTORIUM V6.2.1 — THEORIE + AUTHENTIEKE PRIMAIRE BRONNEN + SYNC + PWA
 
 KERNWIJZIGING
-Scriptorium V6.2.2 splitst leren bewust in twee lagen:
+Scriptorium V6.2.1.2 splitst leren bewust in twee lagen:
 1. THEORIE: onderzoeksprincipes uitgelegd met voorbeelden uit je 56 geanalyseerde papers.
 2. PRAKTIJK: oefeningen op authentieke primaire bronnen.
 
@@ -72,7 +72,7 @@ Op toestel B kies je 'Importeer & merge'.
 De app probeert records samen te voegen in plaats van blind te overschrijven.
 
 OPTIONELE AUTOMATISCHE CLOUDSYNC
-V6.2 ondersteunt een eigen Supabase-project.
+V6.2.1 ondersteunt een eigen Supabase-project.
 1. Maak een gratis Supabase-project.
 2. Open SQL Editor.
 3. Voer SUPABASE_SYNC_SETUP.sql uit.

@@ -149,3 +149,17 @@ body.app-standalone .topbar-sub::after{content:' · appmodus';font-weight:700;co
   .hero h3{font-size:25px}
   .content{padding:13px!important}
 }
+
+
+/* V6.2.1 hotfix — clickable navigation + stronger PWA icon compatibility */
+#app, .shell, .sidebar, .content, .topbar, .nav, .page, .card, .hero, .btn, button, a, input, select, textarea, label {pointer-events:auto}
+.hero::before, .hero::after, .card::before, .card::after, .stat::before, .stat::after, .brand::before, .brand::after {pointer-events:none}
+.sidebar, .topbar, .content {position:relative; z-index:1}
+.nav button, .btn, a, [role="button"], summary {cursor:pointer; touch-action:manipulation; -webkit-tap-highlight-color: rgba(31,93,70,.12)}
+button:disabled{cursor:not-allowed}
+.top-actions{position:relative; z-index:2}
+.mode-chip{user-select:none}
+@media(max-width:760px){
+  .top-actions{flex-wrap:wrap}
+  .mode-chip{margin-right:auto}
+}
