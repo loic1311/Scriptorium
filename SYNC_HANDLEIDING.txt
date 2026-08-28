@@ -1,0 +1,44 @@
+SCRIPTORIUM v6 — SYNCHRONISATIEHANDLEIDING
+
+OPTIE A — SYNCBESTAND (AANBEVOLEN OM MEE TE STARTEN)
+Laptop:
+1. Synchronisatie > Maak syncbestand.
+2. Bewaar het JSON-bestand in bijvoorbeeld OneDrive, iCloud Drive of Google Drive.
+
+Telefoon/tablet:
+3. Open dezelfde cloudmap.
+4. Download/selecteer het JSON-bestand.
+5. Scriptorium > Synchronisatie > Importeer & merge.
+
+Na oefeningen op de telefoon doe je hetzelfde in omgekeerde richting.
+De import probeert trainingspogingen en records samen te voegen.
+
+NIET IN HET SYNCBESTAND:
+- PDF-blobs van de 56 papers;
+- andere zeer grote lokale bestanden.
+
+WEL:
+- metadata;
+- analyses;
+- scores;
+- antwoorden;
+- bronannotaties;
+- mastery/reviewinformatie;
+- eigen bronrecords.
+
+OPTIE B — SUPABASE CLOUDSYNC
+Gebruik SUPABASE_SYNC_SETUP.sql.
+Daarna configureer je URL, publishable/anon key en account in de app.
+
+'Cloud ↔ lokaal' doet:
+1. lokale payload bouwen;
+2. cloudpayload ophalen;
+3. records mergen;
+4. merged versie lokaal opslaan;
+5. merged versie terug naar de cloud sturen.
+
+PRIVACY
+De database gebruikt Row Level Security.
+Elke aangemelde gebruiker mag alleen zijn eigen user_id lezen/schrijven.
+Gebruik nooit de Supabase service-role key in Scriptorium.
+Gebruik alleen de publishable/anon key die voor client-apps bedoeld is.

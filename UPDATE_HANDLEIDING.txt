@@ -1,0 +1,57 @@
+SCRIPTORIUM — EENMALIGE INSTALLATIE EN LATERE UPDATES
+
+BELANGRIJK
+De GitHub Pages-procedure doe je maar ÉÉN KEER.
+
+EERSTE KEER
+1. Maak/publish één GitHub-repository, bijvoorbeeld 'scriptorium'.
+2. Zet GitHub Pages één keer aan voor main / root.
+3. Je krijgt één vaste URL, bijvoorbeeld:
+   https://jouwnaam.github.io/scriptorium/
+4. Installeer diezelfde URL als PWA op laptop en telefoon.
+5. Optioneel: stel Supabase-sync één keer in.
+
+DAARNA BIJ ELKE SCRIPTORIUM-UPDATE
+1. Download de nieuwe Scriptorium-map/ZIP.
+2. Vervang in DEZELFDE lokale GitHub-repository de appbestanden door de nieuwe.
+3. Gebruik GitHub Desktop:
+   - bekijk wijzigingen;
+   - Commit to main;
+   - Push origin.
+4. Klaar. GitHub Pages publiceert dezelfde URL opnieuw.
+5. De geïnstalleerde PWA hoeft NIET opnieuw geïnstalleerd te worden.
+6. Sluit/open de app of herlaad wanneer een update nog niet zichtbaar is.
+
+WAT JE NIET OPNIEUW HOEFT TE DOEN
+- geen nieuwe GitHub-repository;
+- GitHub Pages niet opnieuw activeren;
+- geen nieuwe URL;
+- PWA niet opnieuw aan beginscherm/Startmenu toevoegen;
+- Supabase-tabel niet opnieuw aanmaken zolang het syncschema niet wijzigt;
+- je corpus niet opnieuw analyseren.
+
+WAAROM JE DATA BEHOUDEN BLIJFT
+Zolang de webadres/origin hetzelfde blijft, gebruikt de nieuwe app dezelfde browseropslag (IndexedDB).
+Je lokale trainingsdata blijft dus staan bij een gewone code-update.
+
+VEILIGHEID
+Maak vóór een grote update voor de zekerheid:
+Synchronisatie > Maak syncbestand.
+
+WANNEER WEL EXTRA ACTIE NODIG IS
+- als de repositorynaam/URL verandert;
+- als je een andere browser gebruikt om een tweede PWA te installeren;
+- als je browser/sitegegevens wist;
+- als een toekomstige update expliciet meldt dat het databaseschema of Supabase-schema verandert.
+
+BRONBIBLIOTHEEK
+V6.2.2 bevat 33 ingebouwde authentieke primaire bronnen.
+Nieuwe bronpakketten kunnen daarnaast via de app worden geïmporteerd zonder nieuwe deployment.
+
+
+V6.2 EXTRA
+- nieuw geïntegreerd Scriptorium-logo;
+- verbeterde lichte groen/witte interface;
+- install-knop in de topbalk;
+- aangepaste appiconen voor laptop, Android en iPhone/iPad;
+- responsievere topbalk en branding.

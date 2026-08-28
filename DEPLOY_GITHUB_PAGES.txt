@@ -1,0 +1,61 @@
+SCRIPTORIUM V6.2 GRATIS INSTALLEREN ALS APP VIA GITHUB PAGES
+
+WAAROM
+Een PWA moet via HTTPS worden geopend om als echte app installeerbaar te zijn.
+GitHub Pages kan deze statische Scriptorium-map gratis hosten.
+
+STAPPEN
+1. Maak op GitHub een nieuwe PUBLIC repository, bijvoorbeeld:
+   scriptorium
+
+2. Upload de INHOUD van de map Scriptorium_hybride_V6.2 naar de repository-root:
+   index.html
+   V6.2.js
+   V6.2.css
+   sources.js
+   manifest.webmanifest
+   sw.js
+   icons/
+   enz.
+
+3. Open in GitHub:
+   Settings > Pages
+
+4. Kies:
+   Deploy from a branch
+   Branch: main
+   Folder: /(root)
+
+5. Wacht tot GitHub je HTTPS-link toont, bijvoorbeeld:
+   https://jouwnaam.github.io/scriptorium/
+
+6. Open die link minstens één keer online zodat de service worker de app-shell kan cachen.
+
+INSTALLEREN OP WINDOWS / MAC
+- Open de HTTPS-link in Chrome of Edge.
+- Gebruik de install-knop in de adresbalk of menu > Install app.
+- Scriptorium opent daarna in een eigen appvenster.
+
+INSTALLEREN OP IPHONE / IPAD
+- Open de link in Safari.
+- Share > Add to Home Screen.
+- Open daarna via het Scriptorium-icoon.
+
+INSTALLEREN OP ANDROID
+- Open in Chrome.
+- Menu > Install app / Add to Home screen.
+
+OFFLINE
+Na een eerste online bezoek wordt de app-shell gecachet.
+Lokale IndexedDB-data blijft op het toestel.
+Externe bronlinks en nog niet gecachete internetbronnen vereisen internet.
+
+LET OP BIJ GITHUB PAGES
+Op GitHub Free is Pages bedoeld voor publieke repositories. De app-code staat dan dus publiek.
+Je eigen lokale IndexedDB-gegevens, trainingsantwoorden, PDF's en Supabase-login staan NIET in die repository zolang je ze niet zelf uploadt.
+
+SYNCHRONISATIE
+De PWA op ieder toestel heeft zijn eigen lokale IndexedDB.
+Gebruik:
+- syncbestand voor volledig gratis handmatige merge; of
+- de optionele Supabase-cloudsync voor automatische toesteloverdracht.
