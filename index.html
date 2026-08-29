@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Scriptorium V6.5.2 - Academische Onderzoekscoach</title>
+<title>Scriptorium V7 — Academische Onderzoekscoach</title>
 <meta name="description" content="Lokale, sleutelvrije onderzoekscoach voor masterproeven en doctoraten." />
 <style>
 :root{--bg:#0d1117;--panel:#151b23;--panel2:#1c2430;--line:#2b3544;--text:#e7edf5;--muted:#9aabba;--accent:#9bd6c9;--accent2:#75b8aa;--warn:#f0c36b;--bad:#e88989;--good:#79c99e;--shadow:0 18px 60px rgba(0,0,0,.28);--r:16px}
@@ -127,9 +127,9 @@ body.training-focus-mode .content{padding:0;max-width:none}
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Scriptorium">
-<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon-v652.png">
-<link rel="icon" type="image/png" sizes="48x48" href="./icons/favicon-48-v652.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32-v652.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon-v7.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./icons/favicon-48-v7.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32-v7.png">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./v6.css">
 
@@ -139,24 +139,26 @@ body.training-focus-mode .content{padding:0;max-width:none}
 <aside class="sidebar">
   <div class="brand">
     <div class="logo"><img src="./scriptorium-logo.png" alt="Scriptorium logo"></div>
-    <div class="brand-copy"><div class="brand-row"><h1>Scriptorium</h1><span class="version-pill">V6.4</span></div><small>Onderzoekscoach V6.4 · authentieke bronnen · training · sync</small></div>
+    <div class="brand-copy"><div class="brand-row"><h1>Scriptorium</h1><span class="version-pill">V7</span></div><small>Onderzoekscoach V7 · authentieke bronnen · training · sync</small></div>
   </div>
   <div class="nav" id="nav">
-    <button class="active" data-page="dashboard">Overzicht</button>
+    <button class="active" data-page="dashboard">Home</button>
     <button data-page="corpus">Corpus</button>
-    <button data-page="discovery">Aanvullende vondsten</button>
     <button data-page="exchange">Corpusanalyse</button>
+    <button data-page="discovery">Zoeken</button>
+    <button data-page="sources">Primaire bronnen</button>
+    <button data-page="atelier">Theorie</button>
     <button data-page="training">Training</button>
-    <button data-page="atelier">Leeratelier</button>
-    <button data-page="settings">Instellingen & backup</button>
+    <button data-page="progress">Voortgang</button>
+    <button data-page="settings">Instellingen</button>
   </div>
   <div class="side-note"><strong>18+-doel:</strong> niet antwoorden memoriseren maar vaardigheden transfereren. Training gebruikt wisselende taken en authentieke primaire bronnen; theorie bouwt voort op het geanalyseerde corpus.</div>
 </aside>
 <main>
-  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V6.5.2 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Appweergave</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
+  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V7 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Appweergave</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
   <div class="content"><div id="bootNotice" class="boot-notice" hidden></div>
     <section class="page active" id="page-dashboard">
-      <div class="hero"><div><h3>Van corpus naar aantoonbare beheersing</h3><p>Scriptorium V6.5.2 gebruikt je geanalyseerde corpus als didactische onderlaag, koppelt dat aan authentieke primaire bronnen en laat je trainen tot je onderzoeksvaardigheden zelfstandig, kritisch en transferabel beheerst op masterniveau.</p></div><span class="badge good">V6.4 · GitHub-ready · lokaal + sync + PWA</span></div>
+      <div class="hero"><div><h3>Onderzoek, train en bouw je corpus verder uit</h3><p>Scriptorium V7 brengt corpusbeheer, bronnen, theorie, training en gerichte academische zoekfuncties samen in één werkruimte. Je oorspronkelijke corpus blijft de didactische kern; nieuwe werken worden apart gelabeld en pas na beoordeling zwaarder gewogen.</p></div><span class="badge good">Corpus · bronnen · training · zoeken</span></div>
       <div class="grid stats">
         <div class="stat"><div class="k">Werken</div><div class="v" id="statWorks">0</div></div>
         <div class="stat"><div class="k">Normatief</div><div class="v" id="statNorm">0</div></div>
@@ -172,25 +174,25 @@ body.training-focus-mode .content{padding:0;max-width:none}
     </section>
 
     <section class="page" id="page-corpus">
-      <div class="hero"><div><h3>Corpus</h3><p>Voeg je geselecteerde proeven in meerdere rondes toe. De corpusbibliotheek blijft je bronlaag; na analyse gebruik je Training om de afgeleide vaardigheden actief te beheersen.</p></div><span class="badge warn">Max. 12 PDF's per ronde</span></div>
+      <div class="hero"><div><h3>Corpus</h3><p>Beheer je kerncorpus en later toegevoegde werken op één plaats. Herkomst en didactisch gewicht blijven bewust twee aparte eigenschappen: een UGent-vondst is niet automatisch normatief, en een externe studie kan inhoudelijk toch zeer waardevol zijn.</p></div><span class="badge warn">Max. 12 PDF's per ronde</span></div>
       <div class="card">
         <div class="drop" id="dropZone"><strong>Sleep PDF's hierheen of klik om te kiezen</strong><span class="muted">Bestanden worden één voor één verwerkt zodat de interface bruikbaar blijft.</span><input id="fileInput" type="file" accept="application/pdf,.pdf" multiple><div class="limits"><span class="badge">12 bestanden</span><span class="badge">45 MB per PDF</span><span class="badge">240 MB per ronde</span></div></div>
         <div id="uploadStatus" style="display:none;margin-top:14px"><div class="spread"><span id="uploadText" class="tiny">Verwerken...</span><span id="uploadCount" class="tiny"></span></div><div class="progress" style="margin-top:7px"><div id="uploadBar"></div></div></div>
       </div>
       <div class="card" style="margin-top:14px">
-        <div class="toolbar"><input id="corpusSearch" placeholder="Zoek titel, auteur, RUG01..."><select id="corpusWeight"><option value="">Alle brongewichten</option><option>normatief</option><option>vaknabij</option><option>aanvullend</option><option>onbekend</option></select><select id="corpusStatus"><option value="">Alle statussen</option><option value="geen_analyse">Geen analyse</option><option value="gedeeltelijk">Gedeeltelijk</option><option value="compleet">Compleet</option></select></div>
+        <div class="toolbar"><input id="corpusSearch" placeholder="Zoek titel, auteur, RUG01..."><select id="corpusWeight"><option value="">Alle brongewichten</option><option>normatief</option><option>vaknabij</option><option>aanvullend</option><option>onbekend</option></select><select id="corpusStatus"><option value="">Alle statussen</option><option value="geen_analyse">Geen analyse</option><option value="gedeeltelijk">Gedeeltelijk</option><option value="compleet">Compleet</option></select><select id="corpusProvenance"><option value="">Alle herkomstcategorieën</option><option value="core_original">Oorspronkelijk kerncorpus</option><option value="ugent_discovery">Via UGent gevonden</option><option value="bibliography_chain">Via bibliografie gevonden</option><option value="external_discovery">Extern gevonden</option><option value="user_added">Zelf toegevoegd</option></select></div>
         <div id="corpusTable"></div><div class="pagination"><span id="corpusPageInfo" class="tiny"></span><div class="row"><button class="btn small" id="corpusPrev">Vorige</button><button class="btn small" id="corpusNext">Volgende</button></div></div>
       </div>
     </section>
 
     <section class="page" id="page-discovery">
-      <div class="hero"><div><h3>Aanvullende vondsten</h3><p>Zoek open masterproeven en doctoraten via OpenAlex. Automatisch gevonden werken zijn nooit normatief; ze starten als aanvullend en moeten kritisch gewogen worden.</p></div><span class="badge accent">OpenAlex</span></div>
-      <div class="card"><div class="toolbar"><input id="oaQuery" placeholder="bv. Roman Empire animals logistics"><select id="oaYear"><option value="">Alle jaren</option><option value="2020-">2020 en later</option><option value="2010-">2010 en later</option><option value="2000-">2000 en later</option></select><button class="btn primary" id="oaSearch">Zoeken</button></div><div class="callout warn"><strong>Geen kwaliteitsgarantie.</strong> Cijfer, begeleider en lokale beoordelingscultuur zijn vaak onbekend. Gebruik deze vondsten ter aanvulling, niet als model voor wat UGent Oude Geschiedenis eist.</div></div>
-      <div id="oaResults" class="discovery" style="margin-top:14px"></div>
+      <div class="hero compact-hero"><div><h3>Zoeken</h3><p>Vind nieuwe theses, doctoraten en literatuur via UGent, OpenAlex en de bibliografieën van je bestaande corpus. Zoekresultaten zijn kandidaten: herkomst is zichtbaar, kwaliteit moet je nog beoordelen.</p></div><span class="badge accent">UGent · OpenAlex · bibliografieketen</span></div>
+      <div id="v7SearchHub"></div>
+      <div style="display:none"><input id="oaQuery"><select id="oaYear"><option value=""></option></select><button id="oaSearch"></button><div id="oaResults"></div></div>
     </section>
 
     <section class="page" id="page-exchange">
-      <div class="hero"><div><h3>Corpusanalyse</h3><p>De 45-pagina-batches zijn afgeschaft. Scriptorium exporteert de <strong>volledige originele PDF’s</strong> van je nog niet afgewerkte corpus. Als de totale omvang te groot is voor één ZIP, maakt de app automatisch enkele veilige volumes in één klik. Upload al die volumes vervolgens <strong>samen in één ChatGPT-bericht</strong>. ChatGPT beheert daarna zelf de interne paginadeling.</p></div><span class="badge good">één exportactie · één finale JSON</span></div>
+      <div class="hero"><div><h3>Corpusanalyse</h3><p>Exporteer nieuwe of nog niet geanalyseerde PDF’s als volledig corpuspakket en importeer daarna één cumulatief analyseresultaat terug. Fysieke PDF-pagina’s blijven de vaste referentie-eenheid.</p></div><span class="badge good">één exportactie · één finale JSON</span></div>
 
       <div class="callout good" style="margin-bottom:14px"><strong>Hoofddoel blijft didactisch:</strong> voorbeelden worden gebruikt om onderzoeksbeslissingen en schrijfvaardigheden te leren. Geen voorbeeldzinnen, unieke formuleringen of hoofdstukstructuren overnemen. De analyse abstraheert steeds van <em>voorbeeld → principe → reden → grens → oefening → eigen toepassing</em>.</div>
 
@@ -374,15 +376,15 @@ body.training-focus-mode .content{padding:0;max-width:none}
     </section>
 
     <section class="page" id="page-atelier">
-      <div class="hero"><div><h3>Leeratelier</h3><p>Hier wordt het corpus didactisch bruikbaar: observaties uit voorbeelden worden omgezet in overdraagbare principes, grenzen, oefeningen en feedback op jouw eigen tekst. Het doel is dat jij de vaardigheid beheerst — niet dat je de formulering of structuur van één auteur imiteert.</p></div><span class="badge accent">Voorbeeld → principe → oefening → eigen toepassing</span></div>
+      <div class="hero compact-hero"><div><h3>Theorie</h3><p>Leer onderzoeksvaardigheden stap voor stap: begrijp het probleem, vergelijk meerdere corpusvoorbeelden en pas het principe daarna zelfstandig toe.</p></div><span class="badge accent">Voorbeeld → principe → oefening → eigen toepassing</span></div>
       <div class="grid two">
-        <div class="card"><div class="spread"><h4>Technieken uit je corpus</h4><select id="lessonFilter"><option value="normatief">Eerst normatief</option><option value="all">Alle analyses</option></select></div><div id="lessons" class="grid" style="gap:9px"></div></div>
+        <div id="v7TheoryHub"></div><div class="card"><div class="spread"><h4>Corpusprincipes</h4><select id="lessonFilter"><option value="normatief">Eerst normatief</option><option value="all">Alle analyses</option></select></div><div id="lessons" class="grid" style="gap:9px"></div></div>
         <div class="card"><h4>Vergelijk mijn tekst via ChatGPT</h4><div class="field"><label>Kies benchmarkwerken (Ctrl/Cmd voor meerdere)</label><select id="benchmarkWorks" multiple size="7"></select></div><div class="field"><label>Jouw fragment</label><textarea id="ownText" placeholder="Plak hier een paragraaf, status quaestionis, onderzoeksvraag, bronkritiek..." style="min-height:180px"></textarea></div><div class="field"><label>Doel</label><select id="atelierGoal"><option>Argumentatie aanscherpen</option><option>Onderzoeksvraag verbeteren</option><option>Bronkritiek verdiepen</option><option>Status quaestionis verbeteren</option><option>Academische stijl verbeteren</option><option>Structuur van hoofdstuk verbeteren</option></select></div><button class="btn primary" id="copyComparePrompt">Kopieer vergelijkingsprompt</button></div>
       </div>
     </section>
 
     <section class="page" id="page-settings">
-      <div class="hero"><div><h3>Instellingen, delen & backup</h3><p>Scriptorium V6.5.2 is gebouwd voor lokale browseropslag én publicatie via GitHub Pages. Persoonlijke PDF-bestanden blijven lokaal; de didactische corpusanalyse en primaire-bronnenbibliotheek zijn ingebouwd.</p></div><span class="badge good">GitHub-release mode</span></div>
+      <div class="hero"><div><h3>Instellingen</h3><p>Beheer opslag, backup, synchronisatie, PWA-installatie, delen en Telegram vanuit één plaats.</p></div><span class="badge good">opslag · sync · delen</span></div>
       <div class="grid two">
         <div class="card"><h4>Backup</h4><p>Exporteer metadata, analyses en notities als JSON. PDF-bestanden zelf worden niet opgenomen.</p><div class="row"><button class="btn primary" id="exportBackup">Backup exporteren</button><label class="btn" for="importBackupFile">Backup importeren</label><input id="importBackupFile" type="file" accept="application/json,.json" style="display:none"></div></div>
         <div class="card"><h4>Opslag</h4><p id="storageInfo">Opslaginformatie laden...</p><div class="row"><button class="btn" id="cleanupOrphans">Wees-PDF's opruimen</button><button class="btn danger" id="resetAll">Alles wissen</button></div></div>
@@ -1233,6 +1235,7 @@ window.openDetail=openDetail;window.editWork=editWork;window.removeWork=removeWo
 <script src="./v6_4.js"></script>
 <script src="./v6_5.js"></script>
 <script src="./v6_5_2.js"></script>
+<script src="./v7.js"></script>
 <script>init();
 </script>
 </body>
