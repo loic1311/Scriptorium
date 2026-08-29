@@ -1,12 +1,12 @@
 {
-  "name": "Scriptorium V6.3.1 - Academische Onderzoekscoach",
+  "name": "Scriptorium V6.3.2 — Academische Onderzoekscoach",
   "short_name": "Scriptorium",
-  "description": "Academische onderzoekscoach voor Oude Geschiedenis met authentieke primaire bronnen, 56-werken corpusanalyse, training en local-first synchronisatie.",
+  "description": "Oude-geschiedenis onderzoekscoach met concrete theorie, authentieke primaire bronnen, training, voortgang en gesynchroniseerde PWA-weergave voor laptop en telefoon.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#eef4f0",
-  "theme_color": "#173c2e",
+  "background_color": "#f5f2ea",
+  "theme_color": "#173f35",
   "icons": [
     {
       "src": "./icons/icon-192-v63.png",

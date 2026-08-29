@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Scriptorium">
-<title>Scriptorium V6.3.1 - Academische Onderzoekscoach</title>
+<title>Scriptorium V6.3.2 - Academische Onderzoekscoach</title>
 <meta name="description" content="Lokale, sleutelvrije onderzoekscoach voor masterproeven en doctoraten." />
 <style>
 :root{--bg:#0d1117;--panel:#151b23;--panel2:#1c2430;--line:#2b3544;--text:#e7edf5;--muted:#9aabba;--accent:#9bd6c9;--accent2:#75b8aa;--warn:#f0c36b;--bad:#e88989;--good:#79c99e;--shadow:0 18px 60px rgba(0,0,0,.28);--r:16px}
@@ -27,7 +27,7 @@ main{min-width:0}.topbar{height:70px;display:flex;align-items:center;justify-con
 @media(max-width:1050px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}.nav{grid-template-columns:repeat(3,minmax(0,1fr))}.side-note{display:none}.topbar{top:0}.grid.stats{grid-template-columns:repeat(2,1fr)}.two,.three,.analysis-grid,.discovery{grid-template-columns:1fr}.content{padding:18px}.sidebar{padding:14px}.brand{margin-bottom:12px}}
 @media(max-width:620px){.nav{grid-template-columns:1fr 1fr}.grid.stats{grid-template-columns:1fr 1fr}.topbar{padding:0 16px}.top-actions .hide-sm{display:none}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.work{grid-template-columns:1fr}.work .actions{justify-content:flex-start}.hero{align-items:flex-start;flex-direction:column}.toolbar input{min-width:100%;width:100%}}
 
-/* Scriptorium v5 training */
+/* Scriptorium V6.3.2 training */
 .training-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:14px}
 .module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .module-card{border:1px solid var(--line);background:#111821;border-radius:13px;padding:13px}
@@ -50,7 +50,7 @@ main{min-width:0}.topbar{height:70px;display:flex;align-items:center;justify-con
 .rubric{display:grid;gap:7px}.rubric-row{display:grid;grid-template-columns:105px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.rubric-row:last-child{border-bottom:0}.rubric-row strong{font-size:12px}.rubric-row span{font-size:12px;color:var(--muted)}
 @media(max-width:1050px){.training-layout,.module-grid{grid-template-columns:1fr}}
 
-/* Scriptorium v5 — white/green visual system */
+/* Scriptorium V6.3.2 — white/green visual system */
 :root{
   --bg:#f3f7f4;--panel:#ffffff;--panel2:#eef6f1;--line:#d8e5dc;
   --text:#17372a;--muted:#6b8176;--accent:#2f7d59;--accent2:#235f44;
@@ -153,10 +153,10 @@ body.training-focus-mode .content{padding:0;max-width:none}
   <div class="side-note"><strong>18+-doel:</strong> niet antwoorden memoriseren maar vaardigheden transfereren. Training gebruikt wisselende taken en authentieke primaire bronnen; theorie bouwt voort op het geanalyseerde corpus.</div>
 </aside>
 <main>
-  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V6.3 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Webmodus</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
+  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V6.3.2 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Webmodus</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
   <div class="content"><div id="bootNotice" class="boot-notice" hidden></div>
     <section class="page active" id="page-dashboard">
-      <div class="hero"><div><h3>Van corpus naar aantoonbare beheersing</h3><p>Scriptorium V6.3.1 gebruikt je geanalyseerde corpus als didactische onderlaag, koppelt dat aan authentieke primaire bronnen en laat je trainen tot je onderzoeksvaardigheden zelfstandig, kritisch en transferabel beheerst op masterniveau.</p></div><span class="badge good">V6.3.1 · GitHub-ready · lokaal + sync + PWA</span></div>
+      <div class="hero"><div><h3>Van corpus naar aantoonbare beheersing</h3><p>Scriptorium V6.3.2 gebruikt je geanalyseerde corpus als didactische onderlaag, koppelt dat aan authentieke primaire bronnen en laat je trainen tot je onderzoeksvaardigheden zelfstandig, kritisch en transferabel beheerst op masterniveau.</p></div><span class="badge good">V6.3.1 · GitHub-ready · lokaal + sync + PWA</span></div>
       <div class="grid stats">
         <div class="stat"><div class="k">Werken</div><div class="v" id="statWorks">0</div></div>
         <div class="stat"><div class="k">Normatief</div><div class="v" id="statNorm">0</div></div>
@@ -381,7 +381,7 @@ body.training-focus-mode .content{padding:0;max-width:none}
     </section>
 
     <section class="page" id="page-settings">
-      <div class="hero"><div><h3>Instellingen, delen & backup</h3><p>Scriptorium V6.3 is gebouwd voor lokale browseropslag én publicatie via GitHub Pages. Persoonlijke PDF-bestanden blijven lokaal; de didactische corpusanalyse en primaire-bronnenbibliotheek zijn ingebouwd.</p></div><span class="badge good">GitHub-release mode</span></div>
+      <div class="hero"><div><h3>Instellingen, delen & backup</h3><p>Scriptorium V6.3.2 is gebouwd voor lokale browseropslag én publicatie via GitHub Pages. Persoonlijke PDF-bestanden blijven lokaal; de didactische corpusanalyse en primaire-bronnenbibliotheek zijn ingebouwd.</p></div><span class="badge good">GitHub-release mode</span></div>
       <div class="grid two">
         <div class="card"><h4>Backup</h4><p>Exporteer metadata, analyses en notities als JSON. PDF-bestanden zelf worden niet opgenomen.</p><div class="row"><button class="btn primary" id="exportBackup">Backup exporteren</button><label class="btn" for="importBackupFile">Backup importeren</label><input id="importBackupFile" type="file" accept="application/json,.json" style="display:none"></div></div>
         <div class="card"><h4>Opslag</h4><p id="storageInfo">Opslaginformatie laden...</p><div class="row"><button class="btn" id="cleanupOrphans">Wees-PDF's opruimen</button><button class="btn danger" id="resetAll">Alles wissen</button></div></div>
@@ -396,7 +396,7 @@ body.training-focus-mode .content{padding:0;max-width:none}
 </main>
 </div>
 
-<div class="modal" id="helpModal"><div class="modal-box"><div class="modal-head"><h3>Zo gebruik je Scriptorium v5</h3><button class="close" data-close="helpModal">×</button></div><div class="grid" style="gap:10px">
+<div class="modal" id="helpModal"><div class="modal-box"><div class="modal-head"><h3>Zo gebruik je Scriptorium V6.3.2</h3><button class="close" data-close="helpModal">×</button></div><div class="grid" style="gap:10px">
       <div class="callout"><strong>Corpus.</strong> Je 56 geanalyseerde werken vormen de didactische kennislaag. Auteur, fysieke PDF-pagina en betrouwbaarheidsniveau blijven behouden.</div>
       <div class="callout good"><strong>Training.</strong> Kies een module in het overzicht en start daarna een aparte focuspagina. Je kunt één oefening, drie oefeningen, een volledige modulesessie of een mastery-run starten.</div>
       <div class="callout"><strong>Variatie.</strong> Oefeningen gebruiken authentieke primaire bronnen en gevarieerde onderzoeksdossiers in veel verschillende Griekse en Romeinse contexten. Ze zijn ontworpen om transfer te testen, niet bronkennis uit het hoofd.</div>
@@ -953,7 +953,7 @@ async function copyTrainingGradingPrompt(){
   const ex=state.currentExercise;if(!ex)return toast("Genereer eerst een oefening.","warn");
   const answer=$("#trainingAnswer").value.trim();if(answer.length<80)return toast("Werk je antwoord eerst voldoende uit.","warn");
   const attempt=await saveCurrentAttempt(answer,true),module=TRAINING_MODULES.find(m=>m.id===ex.module_id),bench=trainingBenchmarks(module),rubric=gradingRubric(module,ex.difficulty);
-  const prompt=`Je beoordeelt een oefening uit Scriptorium v5. Gedraag je als een zeer kritische maar constructieve masterbeoordelaar Oude Geschiedenis. Het doel is niet de student geruststellen maar hem systematisch naar 18+/20 te trainen.
+  const prompt=`Je beoordeelt een oefening uit Scriptorium V6.3.2. Gedraag je als een zeer kritische maar constructieve masterbeoordelaar Oude Geschiedenis. Het doel is niet de student geruststellen maar hem systematisch naar 18+/20 te trainen.
 
 BELANGRIJKE NORM
 - 18/20 of hoger is uitzonderlijk.
@@ -1225,6 +1225,7 @@ window.openDetail=openDetail;window.editWork=editWork;window.removeWork=removeWo
 <script src="./sources.js"></script>
 <script src="./v6.js"></script>
 <script src="./v6_3.js"></script>
+<script src="./v6_3_2.js"></script>
 <script>init();
 </script>
 </body>

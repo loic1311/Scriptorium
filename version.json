@@ -1,6 +1,17 @@
 {
-  "version": "6.3.1",
-  "build": "github-release",
+  "version": "6.3.2",
+  "build": "github-release-r2",
   "generated": "2026-08-29",
-  "release": "V6.3.1"
+  "release": "Scriptorium V6.3.2 refined theory + coherent dossiers",
+  "features": [
+    "multi-paper theory synthesis from 56-work corpus",
+    "accessible full-sentence theory",
+    "coherent authentic-source dossiers",
+    "explicit closed/check/open research modes",
+    "desktop research workspace",
+    "mobile study app",
+    "mobile bottom dock",
+    "training mobile tabs",
+    "GitHub Pages/PWA"
+  ]
 }

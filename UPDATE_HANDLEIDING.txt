@@ -1,6 +1,6 @@
-SCRIPTORIUM V6.3.1 — UPDATEHANDLEIDING
+SCRIPTORIUM V6.3.2 — UPDATEHANDLEIDING
 
-Grote wijziging in V6.3.1
+Grote wijziging in V6.3.2
 Deze release is expliciet geoptimaliseerd voor publicatie via GitHub Pages en voor gebruik door andere gebruikers op nieuwe toestellen.
 
 Wat werd opgelost
@@ -15,7 +15,7 @@ Wat werd opgelost
 
 Updaten vanaf V6.2.x
 1. Maak voor de zekerheid een synchronisatiebestand/backup.
-2. Vervang ALLE repositorybestanden door de inhoud van V6.3.1.
+2. Vervang ALLE repositorybestanden door de inhoud van V6.3.2.
 3. Commit en push naar dezelfde main branch.
 4. Wacht op GitHub Pages.
 5. Open Scriptorium > Instellingen > GitHub/PWA systeemcheck.
@@ -27,3 +27,12 @@ Je hoeft NIET
 - een nieuwe URL te gebruiken;
 - je PWA opnieuw te installeren, tenzij je toestel hardnekkig een oud icoon toont;
 - de 56 corpusanalyses opnieuw handmatig te importeren.
+
+
+V6.3.2
+- Didactische theorie volledig concreter gemaakt.
+- Onderzoeksmodus per oefening zichtbaar.
+- Nieuwe kleurrijkere maar rustige academische palette.
+- Mobiele webapp: bottom dock + trainings-tabs.
+- Desktop: brede research workspace.
+- Layout kan in Instellingen handmatig worden geforceerd.

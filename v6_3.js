@@ -2,7 +2,7 @@
 'use strict';
 
 const V63_BASE_INIT = window.init;
-const V63_VERSION = '6.3.1';
+const V63_VERSION = '6.3.2';
 const FRIEND_PROMPT = 'Gebruik de geuploade Scriptorium AI Instructiegids als vast beoordelingsprotocol voor alle Scriptorium-output die ik in deze chat plak. Wanneer een Scriptorium-prompt om JSON vraagt, antwoord uitsluitend met het gevraagde JSON-object. Hanteer de strenge 18+-norm, wees kritisch maar constructief, en coach mijn redenering in plaats van mijn academische tekst voor mij te schrijven.';
 
 function sleep63(ms){ return new Promise(r=>setTimeout(r,ms)); }
@@ -19,10 +19,10 @@ function updateMode63(){
   document.body.classList.toggle('app-standalone',m.standalone);
 }
 function brand63(){
-  document.title='Scriptorium V6.3.1 - Academische Onderzoekscoach';
-  document.querySelectorAll('.version-pill').forEach(x=>x.textContent='V6.3.1');
-  const s=document.querySelector('.brand small'); if(s)s.textContent='Onderzoekscoach V6.3.1 · GitHub-ready · authentieke bronnen · training · sync';
-  const sub=document.querySelector('.topbar-sub'); if(sub)sub.textContent='Scriptorium V6.3.1 · web, desktop en mobiel';
+  document.title='Scriptorium V6.3.2 - Academische Onderzoekscoach';
+  document.querySelectorAll('.version-pill').forEach(x=>x.textContent='V6.3.2');
+  const s=document.querySelector('.brand small'); if(s)s.textContent='Onderzoekscoach V6.3.2 · GitHub-ready · authentieke bronnen · training · sync';
+  const sub=document.querySelector('.topbar-sub'); if(sub)sub.textContent='Scriptorium V6.3.2 · web, desktop en mobiel';
 }
 function notifyBoot(msg,type='warn'){
   const e=document.getElementById('bootNotice'); if(!e)return;
