@@ -1,11 +1,11 @@
 {
-  "version": "6.5",
-  "release": "V6.5",
+  "version": "6.5.2",
+  "release": "V6.5.2",
   "features": [
-    "antique_rebrand",
-    "improved_responsive_layout",
-    "toolbox",
-    "expanded_primary_source_library",
-    "desktop_mobile_aliases"
+    "mobile_bottom_navigation",
+    "pwa_android_install_hardening",
+    "versioned_manifest_icons",
+    "phone_pwa_diagnostics",
+    "desktop_phone_responsive_modes"
   ]
 }

@@ -27,3 +27,20 @@ Je hoeft NIET
 - een nieuwe URL te gebruiken;
 - je PWA opnieuw te installeren, tenzij je toestel hardnekkig een oud icoon toont;
 - de 56 corpusanalyses opnieuw handmatig te importeren.
+
+
+V6.5.2.2 HOTFIX
+- opgelost: initialisatiecrash “Cannot set properties of null (setting onclick)”;
+- de knop Gemengde review wordt nu onafhankelijk van Bekijk theorie aangemaakt;
+- alle V6-uitbreidingsknoppen worden null-safe gekoppeld, zodat een ontbrekend optioneel element de app niet meer blokkeert.
+
+
+V6.5.2
+- mobiele ondernavigatie: Home, Training, Corpus, Menu;
+- sidebar verdwijnt op telefoon;
+- Menu opent bronnen, voortgang, leeratelier, vondsten, corpusanalyse, synchronisatie en instellingen;
+- Android/PWA manifest en iconen opnieuw opgebouwd;
+- aparte any- en maskable-iconen;
+- service worker registreert onafhankelijk van volledige app-initialisatie;
+- Instellingen bevat telefoon/PWA-diagnose;
+- webmodus/appmodus wordt op standalone display mode gebaseerd.

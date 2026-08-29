@@ -3,11 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<meta name="theme-color" content="#173c2e">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Scriptorium">
-<title>Scriptorium V6.5 - Academische Onderzoekscoach</title>
+<title>Scriptorium V6.5.2 - Academische Onderzoekscoach</title>
 <meta name="description" content="Lokale, sleutelvrije onderzoekscoach voor masterproeven en doctoraten." />
 <style>
 :root{--bg:#0d1117;--panel:#151b23;--panel2:#1c2430;--line:#2b3544;--text:#e7edf5;--muted:#9aabba;--accent:#9bd6c9;--accent2:#75b8aa;--warn:#f0c36b;--bad:#e88989;--good:#79c99e;--shadow:0 18px 60px rgba(0,0,0,.28);--r:16px}
@@ -124,13 +120,17 @@ body.training-focus-mode .content{padding:0;max-width:none}
 
 </style>
 
-<link rel="manifest" href="./manifest.webmanifest">
-<meta name="theme-color" content="#245f45">
+
+<meta name="theme-color" content="#173f52">
+<meta name="application-name" content="Scriptorium">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Scriptorium">
-<link rel="apple-touch-icon" href="./icons/apple-touch-icon-v63.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32-v63.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon-v652.png">
+<link rel="icon" type="image/png" sizes="48x48" href="./icons/favicon-48-v652.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32-v652.png">
+<link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./v6.css">
 
 </head>
@@ -153,10 +153,10 @@ body.training-focus-mode .content{padding:0;max-width:none}
   <div class="side-note"><strong>18+-doel:</strong> niet antwoorden memoriseren maar vaardigheden transfereren. Training gebruikt wisselende taken en authentieke primaire bronnen; theorie bouwt voort op het geanalyseerde corpus.</div>
 </aside>
 <main>
-  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V6.5 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Appweergave</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
+  <div class="topbar"><div class="topbar-left"><div class="topbar-mark"><img src="./scriptorium-logo.png" alt="Scriptorium"></div><div><h2 id="pageTitle">Overzicht</h2><div class="topbar-sub">Scriptorium V6.5.2 · op laptop en telefoon</div></div></div><div class="top-actions"><span class="install-chip mode-chip" id="installStatusChip">Appweergave</span><button class="btn hide-sm" id="quickUpload">PDF's toevoegen</button><button class="btn primary" id="helpBtn">Werkwijze</button></div></div>
   <div class="content"><div id="bootNotice" class="boot-notice" hidden></div>
     <section class="page active" id="page-dashboard">
-      <div class="hero"><div><h3>Van corpus naar aantoonbare beheersing</h3><p>Scriptorium V6.5 gebruikt je geanalyseerde corpus als didactische onderlaag, koppelt dat aan authentieke primaire bronnen en laat je trainen tot je onderzoeksvaardigheden zelfstandig, kritisch en transferabel beheerst op masterniveau.</p></div><span class="badge good">V6.4 · GitHub-ready · lokaal + sync + PWA</span></div>
+      <div class="hero"><div><h3>Van corpus naar aantoonbare beheersing</h3><p>Scriptorium V6.5.2 gebruikt je geanalyseerde corpus als didactische onderlaag, koppelt dat aan authentieke primaire bronnen en laat je trainen tot je onderzoeksvaardigheden zelfstandig, kritisch en transferabel beheerst op masterniveau.</p></div><span class="badge good">V6.4 · GitHub-ready · lokaal + sync + PWA</span></div>
       <div class="grid stats">
         <div class="stat"><div class="k">Werken</div><div class="v" id="statWorks">0</div></div>
         <div class="stat"><div class="k">Normatief</div><div class="v" id="statNorm">0</div></div>
@@ -382,7 +382,7 @@ body.training-focus-mode .content{padding:0;max-width:none}
     </section>
 
     <section class="page" id="page-settings">
-      <div class="hero"><div><h3>Instellingen, delen & backup</h3><p>Scriptorium V6.5 is gebouwd voor lokale browseropslag én publicatie via GitHub Pages. Persoonlijke PDF-bestanden blijven lokaal; de didactische corpusanalyse en primaire-bronnenbibliotheek zijn ingebouwd.</p></div><span class="badge good">GitHub-release mode</span></div>
+      <div class="hero"><div><h3>Instellingen, delen & backup</h3><p>Scriptorium V6.5.2 is gebouwd voor lokale browseropslag én publicatie via GitHub Pages. Persoonlijke PDF-bestanden blijven lokaal; de didactische corpusanalyse en primaire-bronnenbibliotheek zijn ingebouwd.</p></div><span class="badge good">GitHub-release mode</span></div>
       <div class="grid two">
         <div class="card"><h4>Backup</h4><p>Exporteer metadata, analyses en notities als JSON. PDF-bestanden zelf worden niet opgenomen.</p><div class="row"><button class="btn primary" id="exportBackup">Backup exporteren</button><label class="btn" for="importBackupFile">Backup importeren</label><input id="importBackupFile" type="file" accept="application/json,.json" style="display:none"></div></div>
         <div class="card"><h4>Opslag</h4><p id="storageInfo">Opslaginformatie laden...</p><div class="row"><button class="btn" id="cleanupOrphans">Wees-PDF's opruimen</button><button class="btn danger" id="resetAll">Alles wissen</button></div></div>
@@ -1232,6 +1232,7 @@ window.openDetail=openDetail;window.editWork=editWork;window.removeWork=removeWo
 <script src="./v6_3.js"></script>
 <script src="./v6_4.js"></script>
 <script src="./v6_5.js"></script>
+<script src="./v6_5_2.js"></script>
 <script>init();
 </script>
 </body>

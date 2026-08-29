@@ -167,6 +167,8 @@ function v6EnhanceUI(){
   const launch=document.querySelector(".training-launch-card .row");
   if(launch&&!document.querySelector("#openSelectedTheory")){
     launch.insertAdjacentHTML("afterbegin",'<button class="btn" id="openSelectedTheory">Bekijk theorie</button>');
+  }
+  if(launch&&!document.querySelector("#startMixedFromTraining")){
     launch.insertAdjacentHTML("beforeend",'<button class="btn" id="startMixedFromTraining">Gemengde review</button>');
   }
   const hero=document.querySelector("#page-training .hero .badge");
@@ -704,29 +706,31 @@ async function v6RenderSync(){
 }
 
 function v6BindNewUI(){
-  $("#leaveTrainingTheory").onclick=()=>showPage("training");
-  $("#beginPracticeFromTheory").onclick=async()=>{
+  const on=(sel,fn)=>{const el=$(sel);if(el)el.onclick=fn};
+  const change=(sel,fn)=>{const el=$(sel);if(el)el.onchange=fn};
+  on("#leaveTrainingTheory",()=>showPage("training"));
+  on("#beginPracticeFromTheory",async()=>{
     const p=window.V6_PENDING_SESSION||{kind:"module",moduleId:window.V6_THEORY_MODULE};
     window.V6_PENDING_SESSION=null;await window.startTrainingSession(p.kind,p.moduleId,true);
-  };
-  $("#openSelectedTheory").onclick=()=>window.openModuleTheory($("#trainingModule").value);
-  $("#startMixedFromTraining").onclick=v6StartMixedReview;
-  $("#startMixedReview").onclick=v6StartMixedReview;
+  });
+  on("#openSelectedTheory",()=>window.openModuleTheory($("#trainingModule")?.value||TRAINING_MODULES[0].id));
+  on("#startMixedFromTraining",v6StartMixedReview);
+  on("#startMixedReview",v6StartMixedReview);
 
   ["sourceSearch","sourceTypeFilter","sourceLangFilter"].forEach(id=>{const e=$("#"+id);if(e)e.oninput=renderSourceLibrary});
-  $("#exportSourceLibrary").onclick=v6ExportSourceLibrary;
-  $("#importSourceLibrary").onchange=async e=>{try{if(e.target.files[0])await v6ImportSourceLibrary(e.target.files[0])}catch(err){toast(err.message,"bad")}finally{e.target.value=""}};
+  on("#exportSourceLibrary",v6ExportSourceLibrary);
+  change("#importSourceLibrary",async e=>{try{if(e.target.files[0])await v6ImportSourceLibrary(e.target.files[0])}catch(err){toast(err.message,"bad")}finally{e.target.value=""}});
 
-  $("#exportSyncFile").onclick=v6ExportSyncFile;
-  $("#importSyncFile").onchange=async e=>{try{if(e.target.files[0])await v6ImportSyncFile(e.target.files[0])}catch(err){toast(err.message,"bad")}finally{e.target.value=""}};
-  $("#sbSaveConfig").onclick=()=>sbSaveConfig().catch(e=>sbStatus(e.message,"bad"));
-  $("#sbSignUp").onclick=()=>sbSignUp().catch(e=>sbStatus(e.message,"bad"));
-  $("#sbSignIn").onclick=()=>sbSignIn().catch(e=>sbStatus(e.message,"bad"));
-  $("#sbSignOut").onclick=()=>sbSignOut().catch(e=>sbStatus(e.message,"bad"));
-  $("#sbSyncNow").onclick=()=>sbSync("merge").catch(e=>sbStatus(e.message,"bad"));
-  $("#sbPush").onclick=()=>sbSync("push").catch(e=>sbStatus(e.message,"bad"));
-  $("#sbPull").onclick=()=>sbSync("pull").catch(e=>sbStatus(e.message,"bad"));
-  $("#copySupabaseSql").onclick=async()=>{await copyText(V6_SB_SQL);toast("SQL gekopieerd.","good")};
+  on("#exportSyncFile",v6ExportSyncFile);
+  change("#importSyncFile",async e=>{try{if(e.target.files[0])await v6ImportSyncFile(e.target.files[0])}catch(err){toast(err.message,"bad")}finally{e.target.value=""}});
+  on("#sbSaveConfig",()=>sbSaveConfig().catch(e=>sbStatus(e.message,"bad")));
+  on("#sbSignUp",()=>sbSignUp().catch(e=>sbStatus(e.message,"bad")));
+  on("#sbSignIn",()=>sbSignIn().catch(e=>sbStatus(e.message,"bad")));
+  on("#sbSignOut",()=>sbSignOut().catch(e=>sbStatus(e.message,"bad")));
+  on("#sbSyncNow",()=>sbSync("merge").catch(e=>sbStatus(e.message,"bad")));
+  on("#sbPush",()=>sbSync("push").catch(e=>sbStatus(e.message,"bad")));
+  on("#sbPull",()=>sbSync("pull").catch(e=>sbStatus(e.message,"bad")));
+  on("#copySupabaseSql",async()=>{await copyText(V6_SB_SQL);toast("SQL gekopieerd.","good")});
 }
 
 window.init=async function(){

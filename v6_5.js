@@ -46,7 +46,7 @@ function bindTools65(){
   if(stop) stop.onclick=()=>{ if(pomodoroHandle) clearInterval(pomodoroHandle); pomodoroHandle=null; pomodoroUntil=0; renderTimer(); toast('Focustimer gestopt.'); };
   renderTimer();
 }
-window.init=async function(){ if(PREV_INIT) await PREV_INIT(); document.title='Scriptorium V6.5 - Academische Onderzoekscoach'; document.querySelectorAll('.version-pill').forEach(x=>x.textContent='V6.5'); const small=document.querySelector('.brand small'); if(small) small.textContent='Onderzoekscoach V6.5 · klassieke huisstijl · extra bronnen · training · sync'; const sub=document.querySelector('.topbar-sub'); if(sub) sub.textContent='Scriptorium V6.5 · responsieve studie-app voor laptop en telefoon'; updateView65(); bindTools65(); };
+window.init=async function(){ if(PREV_INIT) await PREV_INIT(); document.title='Scriptorium V6.5.1 - Academische Onderzoekscoach'; document.querySelectorAll('.version-pill').forEach(x=>x.textContent='V6.5.1'); const small=document.querySelector('.brand small'); if(small) small.textContent='Onderzoekscoach V6.5.1 · klassieke huisstijl · extra bronnen · training · sync'; const sub=document.querySelector('.topbar-sub'); if(sub) sub.textContent='Scriptorium V6.5.1 · responsieve studie-app voor laptop en telefoon'; updateView65(); bindTools65(); };
 window.addEventListener('resize',updateView65);
 window.addEventListener('orientationchange',updateView65);
 })();
