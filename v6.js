@@ -176,10 +176,12 @@ function v6EnhanceUI(){
 }
 
 async function v6SettingsGet(key,def=null){
-  const r=await idbGet("settings",key);return r?.value??def;
+  if(!db) return def;
+  try{const r=await idbGet("settings",key);return r?.value??def;}catch(e){console.warn("settings read failed",key,e);return def;}
 }
 async function v6SettingsPut(key,value){
-  return idbPut("settings",{key,value,updated_at:Date.now()});
+  if(!db) return null;
+  try{return await idbPut("settings",{key,value,updated_at:Date.now()});}catch(e){console.warn("settings write failed",key,e);return null;}
 }
 
 function v6SourceAll(){
@@ -729,8 +731,9 @@ function v6BindNewUI(){
 
 window.init=async function(){
   v6EnhanceUI();
-  await v6LoadCustomSources();
+  // Open IndexedDB first. v6LoadCustomSources reads the settings store and must never run while db is null.
   await V6_BASE.init();
+  await v6LoadCustomSources();
   v6BindNewUI();
   const hint=$("#showTrainingHint");if(hint)hint.textContent="Hulp / makkelijker";
   await renderV6Progress();

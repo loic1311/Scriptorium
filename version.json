@@ -1,5 +1,6 @@
 {
-  "version": "6.3",
+  "version": "6.3.1",
   "build": "github-release",
-  "generated": "2026-08-29"
+  "generated": "2026-08-29",
+  "release": "V6.3.1"
 }
