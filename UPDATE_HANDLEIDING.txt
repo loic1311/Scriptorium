@@ -1,72 +1,29 @@
-SCRIPTORIUM — EENMALIGE INSTALLATIE EN LATERE UPDATES
+SCRIPTORIUM V6.3 — UPDATEHANDLEIDING
 
-BELANGRIJK
-De GitHub Pages-procedure doe je maar ÉÉN KEER.
+Grote wijziging in V6.3
+Deze release is expliciet geoptimaliseerd voor publicatie via GitHub Pages en voor gebruik door andere gebruikers op nieuwe toestellen.
 
-EERSTE KEER
-1. Maak/publish één GitHub-repository, bijvoorbeeld 'scriptorium'.
-2. Zet GitHub Pages één keer aan voor main / root.
-3. Je krijgt één vaste URL, bijvoorbeeld:
-   https://jouwnaam.github.io/scriptorium/
-4. Installeer diezelfde URL als PWA op laptop en telefoon.
-5. Optioneel: stel Supabase-sync één keer in.
+Wat werd opgelost
+- GitHub-first boot: de 56 geanalyseerde papers worden automatisch als analysis-only corpus geladen op een nieuwe browser/origin.
+- Training/theorie zijn daardoor niet meer afhankelijk van eerder lokaal geïmporteerde IndexedDB-data.
+- Alle eigen assets gebruiken relatieve paden die werken onder een project-URL zoals /Scriptorium/.
+- Service worker vernieuwd zodat code-updates netwerk-eerst laden en offline fallback behouden.
+- Systeemcheck in Instellingen controleert assets, service worker, IndexedDB, PDFLib en JSZip.
+- App-cache kan vanuit Instellingen worden vernieuwd zonder persoonlijke IndexedDB-data te wissen.
+- AI-instructiegids voor vrienden toegevoegd als downloadbare PDF.
+- De publieke release bevat geen originele thesis-PDF's; alleen de didactische analyses.
 
-DAARNA BIJ ELKE SCRIPTORIUM-UPDATE
-1. Download de nieuwe Scriptorium-map/ZIP.
-2. Vervang in DEZELFDE lokale GitHub-repository de appbestanden door de nieuwe.
-3. Gebruik GitHub Desktop:
-   - bekijk wijzigingen;
-   - Commit to main;
-   - Push origin.
-4. Klaar. GitHub Pages publiceert dezelfde URL opnieuw.
-5. De geïnstalleerde PWA hoeft NIET opnieuw geïnstalleerd te worden.
-6. Sluit/open de app of herlaad wanneer een update nog niet zichtbaar is.
+Updaten vanaf V6.2.x
+1. Maak voor de zekerheid een synchronisatiebestand/backup.
+2. Vervang ALLE repositorybestanden door de inhoud van V6.3.
+3. Commit en push naar dezelfde main branch.
+4. Wacht op GitHub Pages.
+5. Open Scriptorium > Instellingen > GitHub/PWA systeemcheck.
+6. Klik indien nodig op App-cache vernieuwen.
 
-WAT JE NIET OPNIEUW HOEFT TE DOEN
-- geen nieuwe GitHub-repository;
-- GitHub Pages niet opnieuw activeren;
-- geen nieuwe URL;
-- PWA niet opnieuw aan beginscherm/Startmenu toevoegen;
-- Supabase-tabel niet opnieuw aanmaken zolang het syncschema niet wijzigt;
-- je corpus niet opnieuw analyseren.
-
-WAAROM JE DATA BEHOUDEN BLIJFT
-Zolang de webadres/origin hetzelfde blijft, gebruikt de nieuwe app dezelfde browseropslag (IndexedDB).
-Je lokale trainingsdata blijft dus staan bij een gewone code-update.
-
-VEILIGHEID
-Maak vóór een grote update voor de zekerheid:
-Synchronisatie > Maak syncbestand.
-
-WANNEER WEL EXTRA ACTIE NODIG IS
-- als de repositorynaam/URL verandert;
-- als je een andere browser gebruikt om een tweede PWA te installeren;
-- als je browser/sitegegevens wist;
-- als een toekomstige update expliciet meldt dat het databaseschema of Supabase-schema verandert.
-
-BRONBIBLIOTHEEK
-V6.2.1.2 bevat 33 ingebouwde authentieke primaire bronnen.
-Nieuwe bronpakketten kunnen daarnaast via de app worden geïmporteerd zonder nieuwe deployment.
-
-
-V6.2.1 EXTRA
-- nieuw geïntegreerd Scriptorium-logo;
-- verbeterde lichte groen/witte interface;
-- install-knop in de topbalk;
-- aangepaste appiconen voor laptop, Android en iPhone/iPad;
-- responsievere topbalk en branding.
-
-V6.2.1 UI-fix
-- logo staat nu ook als rootbestand zodat GitHub Pages het betrouwbaarder laadt;
-- install-app knop verwijderd;
-- dynamische modusbadge: Webmodus/Appmodus + mobiel/desktop;
-- sidebar overlap opgelost;
-- mobiel navigatiemenu compacter en horizontaal scrollbaar.
-
-
-V6.2.1 HOTFIX
-- PWA-icoonbestanden kregen versie-specifieke bestandsnamen om herinstallatie beter te laten verversen;
-- extra favicon/apple-touch-icon/meta-tags toegevoegd;
-- topbalk vereenvoudigd: install-knop verwijderd, alleen slimme modusbadge blijft;
-- extra event-delegatie voor navigatieknoppen en data-go/data-close;
-- pointer-events en mobiele tappable interacties expliciet verstevigd.
+Je hoeft NIET
+- een nieuwe repository te maken;
+- GitHub Pages opnieuw te activeren;
+- een nieuwe URL te gebruiken;
+- je PWA opnieuw te installeren, tenzij je toestel hardnekkig een oud icoon toont;
+- de 56 corpusanalyses opnieuw handmatig te importeren.

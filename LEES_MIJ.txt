@@ -1,103 +1,26 @@
-SCRIPTORIUM V6.2.1 — THEORIE + AUTHENTIEKE PRIMAIRE BRONNEN + SYNC + PWA
+SCRIPTORIUM V6.3 — GITHUB RELEASE
 
-KERNWIJZIGING
-Scriptorium V6.2.1.2 splitst leren bewust in twee lagen:
-1. THEORIE: onderzoeksprincipes uitgelegd met voorbeelden uit je 56 geanalyseerde papers.
-2. PRAKTIJK: oefeningen op authentieke primaire bronnen.
+Wat is nieuw
+- GitHub Pages is nu een volwaardige first-run omgeving: op een nieuw toestel wordt de didactische analyse van 56 papers automatisch als analysis-only corpus geladen.
+- De 33 authentieke primaire bronnen zijn ingebouwd.
+- Persoonlijke PDF-bestanden blijven lokaal in IndexedDB en worden nooit automatisch gepubliceerd.
+- Instellingen bevat een downloadbare PDF voor vrienden: Scriptorium_AI_Instructiegids_Vrienden.pdf.
+- Instellingen bevat een GitHub/PWA systeemcheck en een knop om de app-cache te vernieuwen.
+- Alle eigen appbestanden gebruiken relatieve ./-paden, geschikt voor project-URLs zoals https://naam.github.io/Scriptorium/.
+- Service worker gebruikt netwerk-eerst voor code/HTML en cachefallback voor offline gebruik, zodat updates betrouwbaarder doorkomen.
+- PDFLib en JSZip proberen bij uitval een tweede CDN te laden.
 
-Bij Griekse en Latijnse bronnen:
-- origineel blijft zichtbaar;
-- alleen Engelse vertaling;
-- nooit een Nederlandse tussenvertaling;
-- aparte link naar oorspronkelijke editie/database;
-- aparte link naar Engelse vertaling of controlebron.
+Eerste gebruik op een nieuw toestel
+1. Open de GitHub Pages URL.
+2. Scriptorium maakt zijn lokale database.
+3. Het ingebouwde analysis-only corpus van 56 werken wordt toegevoegd.
+4. Training, theorie, primaire bronnen en voortgang zijn meteen beschikbaar.
+5. Wil je de originele PDF's lokaal raadplegen/exporteren, voeg die op dat toestel zelf toe.
 
-TRAINING
-De 20 bestaande modules blijven behouden en worden aangevuld met:
-21. Authentic Source Lab
-22. Oral Defence
-23. Thesis Studio
+Delen met vrienden
+- Geef de GitHub Pages URL door.
+- Onder Instellingen > Delen met vrienden kunnen zij de AI-instructiegids downloaden.
+- Zij uploaden die PDF in hun eigen ChatGPT-chat en gebruiken daarna de door Scriptorium gekopieerde beoordelingsprompts.
 
-Een volledige module opent voortaan eerst de theorielaag. Daarna start de oefensessie.
-De bronhulp heeft vier niveaus:
-1. context;
-2. taal / epigrafische hulp;
-3. analytische aanwijzing;
-4. scaffold-vragen.
-Blinde transfer stopt na niveau 2; examenmodus geeft geen inhoudelijke hulp.
-
-PRIMAIRE BRONNEN
-De meegeleverde ingebouwde bibliotheek bevat 33 authentieke primaire bronnen en voorbeelden uit:
-- Griekse literatuur;
-- Latijnse literatuur;
-- Attische epigrafie;
-- Romeinse epigrafie;
-- Vindolanda writing tablets;
-- papyrologie;
-- numismatiek.
-Dit is een starterset, geen eindbibliotheek. Nieuwe gecontroleerde bronpakketten kunnen via JSON worden geïmporteerd.
-Zie PRIMARY_SOURCE_PACK_SCHEMA.json.
-
-ANNOTEREN
-In Primaire bronnen kun je per bron noteren:
-- directe observaties;
-- interpretaties / mogelijke inferenties;
-- bias / productie / overlevering;
-- open vragen en gewenste vergelijking.
-Deze notities worden lokaal opgeslagen en kunnen mee synchroniseren.
-
-VOORTGANG
-Nieuwe pagina Voortgang:
-- mastery-map;
-- foutcategorieën uit beoordelingen;
-- gemiddelde scores per beoordelingsdimensie;
-- spaced reviews.
-Na elke beoordeling plant Scriptorium automatisch een nieuwe review:
-<14: ongeveer 1 dag
-14–15.9: ongeveer 3 dagen
-16–17.9: ongeveer 7 dagen
->=18: ongeveer 14 dagen
-
-SYNCHRONISATIE — DIRECT BRUIKBAAR
-De knop 'Maak syncbestand' exporteert alles wat tussen toestellen nuttig is:
-- corpusmetadata + analyses;
-- training en scores;
-- theorievoortgang;
-- primaire-bronannotaties;
-- reviewplanning;
-- eigen bronpakketten.
-PDF-bestanden zelf worden NIET meegenomen.
-
-Op toestel B kies je 'Importeer & merge'.
-De app probeert records samen te voegen in plaats van blind te overschrijven.
-
-OPTIONELE AUTOMATISCHE CLOUDSYNC
-V6.2.1 ondersteunt een eigen Supabase-project.
-1. Maak een gratis Supabase-project.
-2. Open SQL Editor.
-3. Voer SUPABASE_SYNC_SETUP.sql uit.
-4. Open Scriptorium > Synchronisatie.
-5. Vul project URL + publishable/anon key in.
-6. Maak een account of meld aan.
-7. Gebruik Cloud ↔ lokaal.
-
-Het wachtwoord wordt niet opgeslagen. Access- en refresh-tokens worden lokaal bewaard.
-De cloudpayload bevat geen PDF-blobs.
-
-PWA / APP OP TELEFOON EN DESKTOP
-De map bevat:
-- manifest.webmanifest
-- sw.js
-- app-iconen
-
-Voor installatie als app is HTTPS nodig. Een lokale file://-link is niet voldoende voor PWA-installatie.
-Zie DEPLOY_GITHUB_PAGES.txt voor gratis hosting.
-
-BELANGRIJK OVER DE BRONVERTALINGEN
-De starterset bewaart een compacte Scriptorium working translation in het Engels en geeft daarnaast een externe vertaal-/controlebron.
-Voor modern copyrighted materiaal worden geen lange vertalingen gekopieerd.
-Controleer bij belangrijk eigen onderzoek altijd de gelinkte editie en, indien relevant, het kritische apparaat.
-
-DATA
-De bestaande database blijft 'ScriptoriumDB'.
-De bestaande training key 'training_v4' blijft bewust behouden zodat eerdere v4/v5-voortgang niet verloren gaat.
+Persoonlijke data
+De publieke GitHub repository bevat appcode, de afgeleide didactische corpusanalyse, primaire bronrecords en de AI-gids. Persoonlijke antwoorden, scores, Supabase-sessies en lokaal toegevoegde PDF-bestanden staan in browseropslag en worden niet naar GitHub gepusht.

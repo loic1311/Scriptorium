@@ -1,44 +1,25 @@
-SCRIPTORIUM v6 — SYNCHRONISATIEHANDLEIDING
+SCRIPTORIUM V6.3 — SYNCHRONISATIE
 
-OPTIE A — SYNCBESTAND (AANBEVOLEN OM MEE TE STARTEN)
-Laptop:
-1. Synchronisatie > Maak syncbestand.
-2. Bewaar het JSON-bestand in bijvoorbeeld OneDrive, iCloud Drive of Google Drive.
+Wat is al ingebouwd voor iedere gebruiker?
+- 56 analysis-only corpusrecords;
+- 33 authentieke primaire bronnen;
+- theorie- en trainingslogica;
+- AI-instructiegids.
+Deze onderdelen hoeven niet via persoonlijke sync te worden overgedragen.
 
-Telefoon/tablet:
-3. Open dezelfde cloudmap.
-4. Download/selecteer het JSON-bestand.
-5. Scriptorium > Synchronisatie > Importeer & merge.
-
-Na oefeningen op de telefoon doe je hetzelfde in omgekeerde richting.
-De import probeert trainingspogingen en records samen te voegen.
-
-NIET IN HET SYNCBESTAND:
-- PDF-blobs van de 56 papers;
-- andere zeer grote lokale bestanden.
-
-WEL:
-- metadata;
-- analyses;
-- scores;
-- antwoorden;
+Wat is persoonlijk en synchroniseerbaar?
+- eigen antwoorden en scores;
+- reviewplanning;
 - bronannotaties;
-- mastery/reviewinformatie;
-- eigen bronrecords.
+- eigen bronpakketten;
+- eigen corpusmetadata/analyses;
+- instellingen.
 
-OPTIE B — SUPABASE CLOUDSYNC
-Gebruik SUPABASE_SYNC_SETUP.sql.
-Daarna configureer je URL, publishable/anon key en account in de app.
+PDF-bestanden
+Grote lokaal toegevoegde PDF-blobs blijven op elk toestel in IndexedDB en worden niet in de gewone syncpayload opgenomen.
 
-'Cloud ↔ lokaal' doet:
-1. lokale payload bouwen;
-2. cloudpayload ophalen;
-3. records mergen;
-4. merged versie lokaal opslaan;
-5. merged versie terug naar de cloud sturen.
+Optie A: syncbestand
+Instellingen/Synchronisatie > Maak syncbestand. Bewaar dit in een gedeelde cloudmap en importeer/merge op het andere toestel.
 
-PRIVACY
-De database gebruikt Row Level Security.
-Elke aangemelde gebruiker mag alleen zijn eigen user_id lezen/schrijven.
-Gebruik nooit de Supabase service-role key in Scriptorium.
-Gebruik alleen de publishable/anon key die voor client-apps bedoeld is.
+Optie B: Supabase
+Gebruik SUPABASE_SYNC_SETUP.sql eenmalig in een eigen Supabase-project en meld op elk toestel met hetzelfde account aan.

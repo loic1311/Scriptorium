@@ -163,3 +163,13 @@ button:disabled{cursor:not-allowed}
   .top-actions{flex-wrap:wrap}
   .mode-chip{margin-right:auto}
 }
+
+/* Scriptorium V6.3 - GitHub release hardening */
+.boot-notice{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid #dfc98d;background:#fff9e9;color:#725615;font-size:13px;line-height:1.45;box-shadow:0 8px 20px rgba(31,93,70,.05)}
+.boot-notice.bad{border-color:#e3b0b0;background:#fff1f1;color:#8a3434}.boot-notice.good{border-color:#acd0b9;background:#f0f9f3;color:#286f4c}
+.health-list{display:grid;gap:7px;margin-top:10px}.health-row{display:grid;grid-template-columns:12px 1fr auto;gap:9px;align-items:start;padding:9px 10px;border:1px solid var(--line);border-radius:12px;background:#fbfdfb}.health-row>span:last-child{font-size:10px;font-weight:800;letter-spacing:.05em}.health-dot{width:9px;height:9px;margin-top:4px;border-radius:50%;background:#99a89f}.health-row.ok .health-dot{background:#2f8a5e}.health-row.bad .health-dot{background:#bf5d5d}.health-row.ok>span:last-child{color:#2f7b57}.health-row.bad>span:last-child{color:#a54343}
+.friend-card{background:linear-gradient(145deg,#ffffff,#f3faf5)}
+#nav button,.btn,[data-go],[data-close],a{pointer-events:auto!important;touch-action:manipulation}.page{pointer-events:auto}.page:not(.active){display:none!important}.page.active{display:block!important}
+.content,.sidebar,.topbar{isolation:isolate}.sidebar{z-index:20}.topbar{z-index:15}.content{z-index:1}
+@media(max-width:1050px){.sidebar{z-index:20}.content{position:relative}.nav button{min-height:48px}}
+@media(max-width:620px){.health-row{grid-template-columns:12px 1fr}.health-row>span:last-child{grid-column:2}.friend-card .row{align-items:stretch}.friend-card .row .btn{width:100%;justify-content:center;text-align:center}}
