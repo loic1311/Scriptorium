@@ -1,4 +1,6 @@
-SCRIPTORIUM V6.3.2.2 — GITHUB RELEASE
+SCRIPTORIUM V6.4 — TOEGANKELIJKE THEORIE + COMPLETE OEFENDOSSIERS
+
+SCRIPTORIUM V6.3.1 — GITHUB RELEASE
 
 Wat is nieuw
 - GitHub Pages is nu een volwaardige first-run omgeving: op een nieuw toestel wordt de didactische analyse van 56 papers automatisch als analysis-only corpus geladen.
@@ -26,22 +28,12 @@ Persoonlijke data
 De publieke GitHub repository bevat appcode, de afgeleide didactische corpusanalyse, primaire bronrecords en de AI-gids. Persoonlijke antwoorden, scores, Supabase-sessies en lokaal toegevoegde PDF-bestanden staan in browseropslag en worden niet naar GitHub gepusht.
 
 
-V6.3.2 — DIDACTIEK & INTERFACE
-- Iedere oefening vermeldt expliciet Gesloten dossier, Broncontrole of Open onderzoek.
-- Gesloten dossier: geen externe zoekopdracht nodig.
-- Broncontrole: alleen de gekoppelde originele bronrecords openen.
-- Open onderzoek: gericht aanvullend zoeken is bewust onderdeel van de opdracht.
-- Theorie is herschreven naar gewone taal: principe, concreet voorbeeld, fout vs sterk, denkstappen, papercases en authentieke bron.
-- Laptopweergave is een brede research workspace.
-- Telefoonweergave is een aparte studie-interface met ondernavigatie en tabs Dossier / Antwoord / Feedback.
-- Instellingen > Interfaceweergave: Automatisch, Laptop of Telefoon.
-- desktop.html en mobile.html kunnen gebruikt worden om een specifieke weergave te openen.
-
-
-V6.3.2 REFINED THEORY / RESEARCH MODES
-- Theorie wordt nu gesynthetiseerd uit meerdere verschillende papers, niet herhaald uit één auteur.
-- De corpuslijn gebruikt concrete ankers uit verschillende werken met exacte fysieke PDF-pagina.
-- Oefendossiers worden thematisch coherent samengesteld.
-- Iedere oefening zegt expliciet: Gesloten dossier, Broncontrole of Open onderzoek.
-- Module 6 (status quaestionis) en 7 (positionering) zijn bewust open onderzoek: de 56 papers zijn methodische voorbeelden, niet automatisch literatuur over het oefenthema.
-- Op telefoon verdwijnt de dubbele desktop-sidebar; de app gebruikt een compacte header, bottom navigation en training-tabs.
+V6.4 DIDACTISCHE HERZIENING
+- Theorie is herschreven in gewone taal, met stappenplannen en concrete voorbeelden.
+- Iedere theorieles koppelt de regel aan echte voorbeelden uit het 56-werken-corpus, met auteur en fysieke PDF-pagina.
+- Iedere theorieles bevat ook een worked example met een authentieke primaire bron.
+- Training toont nu vóór de bronnen een expliciet onderzoekskader: vraag/doel, voorlopige claim, afbakening, corpuslogica en methode.
+- Basiscontext die noodzakelijk is om een bron te analyseren is niet langer verstopt achter de hintknop.
+- Bronselectie probeert thematisch coherente dossiers te maken in plaats van willekeurige combinaties.
+- Modules Status quaestionis en Historiografische positionering krijgen echte onderzoeksposities uit het geanalyseerde corpus als materiaal.
+- Didactische onderzoekssituaties/studentfragmenten worden duidelijk gelabeld en zijn nooit vermomd als primaire bron.

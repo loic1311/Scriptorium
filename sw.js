@@ -1,11 +1,11 @@
-const CACHE='scriptorium-v6.3.2-r2-shell-1';
+const CACHE='scriptorium-v6.5-shell-1';
 const LOCAL_SHELL=[
-  './','./index.html','./desktop.html','./mobile.html','./v6.css','./v6.js','./v6_3.js','./v6_3_2.js','./sources.js',
+  './','./index.html','./desktop.html','./mobile.html','./v6.css','./v6.js','./v6_3.js','./v6_4.js','./v6_5.js','./sources.js',
   './manifest.webmanifest','./version.json','./corpus_seed.json',
   './Scriptorium_AI_Instructiegids_Vrienden.pdf',
   './scriptorium-logo.png','./scriptorium-logo-64.png',
-  './icons/icon-192-v63.png','./icons/icon-512-v63.png',
-  './icons/apple-touch-icon-v63.png','./icons/favicon-32-v63.png'
+  './icons/icon-192.png','./icons/icon-512.png',
+  './icons/apple-touch-icon.png','./icons/favicon-32.png'
 ];
 self.addEventListener('install',event=>{
   event.waitUntil((async()=>{

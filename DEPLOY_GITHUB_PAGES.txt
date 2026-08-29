@@ -1,4 +1,4 @@
-SCRIPTORIUM V6.3.2 — PUBLICEREN VIA GITHUB PAGES
+SCRIPTORIUM V6.3 — PUBLICEREN VIA GITHUB PAGES
 
 Gebruik bij voorkeur het pakket Scriptorium_V6_3_GITHUB_ROOT.zip. De bestanden daarin staan al op repository-rootniveau.
 

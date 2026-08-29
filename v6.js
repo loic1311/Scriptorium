@@ -429,7 +429,7 @@ window.startTrainingSession=async function(kind=null,moduleId=null,skipTheory=fa
   const k=kind||$("#trainingSessionLength")?.value||"module";
   if(!skipTheory && ["module","mastery"].includes(k)){
     window.V6_PENDING_SESSION={kind:k,moduleId:id};
-    return openModuleTheory(id);
+    return window.openModuleTheory(id);
   }
   return V6_BASE.startTrainingSession(k,id);
 };
@@ -445,7 +445,7 @@ window.renderTraining=function(){
   document.querySelectorAll("#trainingModuleMap .module-card").forEach((card,i)=>{
     const m=TRAINING_MODULES[i];if(!m||card.querySelector(".v6-theory-btn"))return;
     const actions=card.querySelector(".module-actions")||card;
-    const b=document.createElement("button");b.className="btn small v6-theory-btn";b.textContent="Theorie";b.onclick=()=>openModuleTheory(m.id);actions.insertBefore(b,actions.firstChild);
+    const b=document.createElement("button");b.className="btn small v6-theory-btn";b.textContent="Theorie";b.onclick=()=>window.openModuleTheory(m.id);actions.insertBefore(b,actions.firstChild);
   });
 };
 
@@ -709,7 +709,7 @@ function v6BindNewUI(){
     const p=window.V6_PENDING_SESSION||{kind:"module",moduleId:window.V6_THEORY_MODULE};
     window.V6_PENDING_SESSION=null;await window.startTrainingSession(p.kind,p.moduleId,true);
   };
-  $("#openSelectedTheory").onclick=()=>openModuleTheory($("#trainingModule").value);
+  $("#openSelectedTheory").onclick=()=>window.openModuleTheory($("#trainingModule").value);
   $("#startMixedFromTraining").onclick=v6StartMixedReview;
   $("#startMixedReview").onclick=v6StartMixedReview;
 
